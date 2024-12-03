@@ -24,7 +24,7 @@ Find connects all nodes on the path to the root node each time it visits. The ti
 
 Union merges two sets and calls find to determine whether the root nodes of the two nodes are the same. The time complexity of a single union is O(α(V))
 
-α is the extremely slowly growing inverse Ackermann function and less than log(v).
+α is the extremely slowly growing inverse Ackermann function and the growth rate is less than log(v).
 
 The total time complexity is theta(Eα(V))
 
