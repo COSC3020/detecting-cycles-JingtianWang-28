@@ -22,11 +22,18 @@ When traversing the graph in union, each edge is called once. Find needs to dete
 
 Find connects all nodes on the path to the root node each time it visits. The time complexity is O(V)
 
+in function find, in the recursive process, all visited nodes are directly linked to the root node.
+
+in function union, if they are not in the same set, the parent node of root1 is set to root2, and the two sets are merged into one
+
 Union merges two sets and calls find to determine whether the root nodes of the two nodes are the same. The time complexity of a single union is O(α(V))
+
+Path compression and union rank in function find and function union are O(α(V))
 
 α is the extremely slowly growing inverse Ackermann function and the growth rate is less than log(v).
 
 The total time complexity is theta(Eα(V))
+
 
 ###
 https://en.wikipedia.org/wiki/Kruskal%27s_algorithm
