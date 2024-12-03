@@ -34,3 +34,13 @@ const testCases = [
     }
 ];
 
+testCases.forEach(({ description, input, expected }) => {
+    try {
+        const result = hasCycle(input);
+        assert.strictEqual(result, expected);
+        console.log(`Passed: ${description}`);
+    } catch (error) {
+        console.error(`Failed: ${description}`);
+        console.error(`Expected: ${expected}, Got: ${hasCycle(input)}`);
+    }
+});
