@@ -32,6 +32,8 @@ Path compression and union rank in function find and function union are O(α(V))
 
 α is the extremely slowly growing inverse Ackermann function and the growth rate is less than log(v).
 
+In the worst case, each operation of union find can take O(n), which can result in a very tall tree. unioning a new node under a previously added node results in a chain-like structure, and finding the root requires traversing the entire chain. When using path compression, each execution causes all nodes on the search path to point directly to the root. Over multiple operations, this can significantly reduce the height of the tree.
+
 This is a known theoretical result, proven by Robert Tarjan and others in the 1970s, that for m operations on n elements, union-find with path compression runs in O(m α(n)) time.
 
 or just write as O(v)
