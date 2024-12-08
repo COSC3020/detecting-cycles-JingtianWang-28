@@ -32,7 +32,11 @@ Path compression and union rank in function find and function union are O(α(V))
 
 α is the extremely slowly growing inverse Ackermann function and the growth rate is less than log(v).
 
-The total time complexity is theta(Eα(V))
+This is a known theoretical result, proven by Robert Tarjan and others in the 1970s, that for m operations on n elements, union-find with path compression runs in O(m α(n)) time.
+
+or just write as O(v)
+
+The total time complexity is theta(E(V))
 
 
 ###
